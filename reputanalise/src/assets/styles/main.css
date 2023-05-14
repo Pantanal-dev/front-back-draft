@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: 'Comfortaa', cursive;
+    background-image: linear-gradient(to bottom left, #229679, #18ADE0);
+}
+
+#app {
+    width: 96%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 1rem;
+}
+
+.search {
+    width: 80%;
+    max-width: 768px;
+    height: max-content;
+    display: flex;
+    justify-content: space-around;
+    padding: .5rem;
+    background-color: #ececec;
+    border-radius: 10rem;
+    box-shadow: .25rem .25rem 1.5rem #d4d4d4;
+}
+
+.search-field {
+    width: 70%;
+    background-color: #ececec;
+    border: none;
+    outline: none;
+}
+
+.search-button-wrapper {
+    width: 15%;
+    padding: .25rem;
+    border: none;
+    background-image: linear-gradient(to bottom left, #229679, #18ADE0);
+    border-radius: 10rem;
+}
+
+.search-button {
+    width: 100%;
+    border: none;
+    padding: .5rem .25rem;
+    border-radius: 10rem;
+    transition: all .5s ease-in-out;
+    color: #18ADE0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.search-button::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom left, #229679, #18ADE0);
+    z-index: -1;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    border-radius: 1rem;
+}
+
+.search-button:hover::before {
+    opacity: 1;
+}
+
+.search-button:hover {
+    color: #ffffff;
+}
+
+.sentiment-analysis {
+    margin-top: 2rem;
+    width: 80%;
+    max-width: 768px;
+    border-radius: .5rem;
+}
+
+.sentiment-analysis--negative {
+    background-color: #ffeded;
+    border: 1px solid #ff595e;
+}
+
+.sentiment-analysis--neutral {
+    background-color: #e2e3e5;
+    border: 1px solid #777777;
+}
+
+.sentiment-analysis--positive {
+    background-color: #d6f6d5;
+    border: 1px solid #46CF76;
+}
+
+.sentiment-analysis--negative :first-child {
+    color: #ff595e;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.sentiment-analysis--neutral :first-child {
+    color: #777777;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.sentiment-analysis--positive :first-child {
+    color: #46CF76;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.result {
+    display: block;
+    text-align: center;
+}
+
+.result-score {
+    text-align: center;
+}
